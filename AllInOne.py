@@ -1,5 +1,5 @@
 import configparser
-import banner
+import banner as 
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
 from telethon.tl.types import InputPeerEmpty, InputPeerChannel, InputPeerUser
@@ -10,7 +10,30 @@ import csv
 import traceback
 import time
 import random
+import os, sys
+re="\033[1;31m"
+gr="\033[1;32m"
+cy="\033[1;36m"
 
+def Name_banner():
+    os.system('clear')
+	 print(f"""
+   (gr+" ******Welcome to IIT DEVELOPER *******")
+       	{re}╦ ╦ ╔╦╗{cy}╔═╗ ┌─┐ ┬ ┬ ╔═╗ ║  ╔═╗ ┌─┐┌─┐┬─┐
+        {re}║ ║  ║ {cy}║ ║ ├┤  │ │ ├┤  ║  ║ ║ ├─┘├┤ ├┬┘
+        {re}╩ ╩  ╩ {cy}╚═╝ └─┘  ─  ╚═╝ ╚═ ╚═╝ ┴  └─┘┴└─
+        version : 2.0
+        {re} Created By {cy} IIT DEVELOPER {gr}Team 
+        """)
+        
+    
+def setup_banner():
+  Name_banner()
+  print(f"""
+	{re}╔═╗{cy}┌─┐┌┬┐┬ ┬┌─┐
+	{re}╚═╗{cy}├┤  │ │ │├─┘
+	{re}╚═╝{cy}└─┘ ┴ └─┘┴
+	""")     
 
 def Help():
  print(gr+"[1] First Install Your Appliaction using Menu button 1 ")
@@ -19,14 +42,14 @@ def Help():
  print(gr+"[4]  ")
 
 def install():
-  banner.setup_banner()
+  setup_banner()
   print(gr+"[+] Installing requierments ...")
   os.system('python -m pip install telethon')
   os.system('pip install telethon')
   print(gr+"[+] installation  Complate  !")
   
 def setupForScrape():
- banner.setup_banner()
+ setup_banner()
  os.system("touch configScrap.data")
  cpass = configparser.RawConfigParser()
  cpass.add_section('cred')
@@ -45,7 +68,7 @@ def acceptdata():
  cpass.set('cred', 'phone', xphone)
  
 def setupForAddData():
- banner.setup_banner()
+ setup_banner()
  os.system("touch configAddData.data")
  cpass = configparser.RawConfigParser()
  cpass.add_section('cred')
@@ -57,7 +80,7 @@ def setupForAddData():
  
  
 def scraper ():
- banner.Name_banner()
+ Name_banner()
  cpass = configparser.RawConfigParser()
  cpass.read('onfigScrap.data')
 
@@ -76,11 +99,11 @@ def scraper ():
  if not client.is_user_authorized():
     client.send_code_request(phone)
     os.system('clear')
-    banner.Name_banner
+    Name_banner
     client.sign_in(phone, input(gr+'[+] Enter the code: '+re))
  
  os.system('clear')
- banner.Name_banner
+ Name_banner
  chats = []
  last_date = None
  chunk_size = 500
@@ -142,7 +165,7 @@ def scraper ():
 
 
 def AddMemberInGroup():
- banner.Name_banner()
+ Name_banner()
  cpass = configparser.RawConfigParser()
  cpass.read('configAddData.data')
 
