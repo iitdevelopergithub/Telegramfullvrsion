@@ -1,6 +1,4 @@
-import Telegram2.O
 import configparser
-import Telegram2.O
 import banner
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
