@@ -29,7 +29,7 @@ def login():
         menu()
 
 def menu():
-    print("************MAIN MENU**************"")
+    print("Main Menu Select any one ")
     time.sleep(1)
     print()
     choice = input("""
