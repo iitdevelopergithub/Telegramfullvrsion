@@ -41,7 +41,7 @@ print(gr+"[+] Acount setup complete !")
 def acceptdata():
  xid = input(gr+"[+] enter api ID : "+re)
  cpass.set('cred', 'id', xid)
- x hash = input(gr+"[+] enter hash ID : "+re)
+ xhash = input(gr+"[+] enter hash ID : "+re)
  cpass.set('cred', 'hash', xhash)
  xphone = input(gr+"[+] enter phone number : "+re)
  cpass.set('cred', 'phone', xphone)
