@@ -226,9 +226,6 @@ def AddMemberInGroup():
         if mode == 1:
             if user['username'] == "":
                 continue
-	    else:
-		user_to_add = InputPeerUser(user['id'], user['access_hash'])
-			
             user_to_add = client.get_input_entity(user['username'])
         elif mode == 2:
             user_to_add = InputPeerUser(user['id'], user['access_hash'])
