@@ -20,30 +20,29 @@ def main():
 def login():
     username="IITDEVELOPER"
     password="RK@900"
-    print("Enter username : ")
-    answer1=input()
+    #print("Enter username : ")
+    #answer1=input()
     print("Enter password : ")
     answer2=input()
-    if answer1==username and answer2==password:
+    if answer1==username or answer2==password:
         print("Welcome - Access Granted")
         menu()
-
 def menu():
     print("Main Menu Select any one ")
     time.sleep(1)
     print()
     choice = input("""
-                      A: Install Application 
-                      B: Setup Your Acount for scrapping Data
-                      C: Scrape Data From Group
-                      D: Setup Acount for Add Data in Group
-                      E: Add Member Into Group 
-                      H: How to Work this  
-                      Q: Quit/Log Out
-                      Please enter your choice: """)
-
+    A: Install Application 
+    B: Setup Your Acount for scrapping Data
+    C: Scrape Data From Group
+    D: Setup Acount for Add Data in Group
+    E: Add Member Into Group 
+    H: How to Work this  
+    Q: Quit/Log Out
+    
+    Please enter your choice: """)                  
     if choice == "A" or choice =="a":
-          install()  
+          installapp()  
     elif choice == "B" or choice =="b":
          setupForScrape()        
     elif choice == "C" or choice =="c":
@@ -62,15 +61,6 @@ def menu():
         menu()
 
 main()
-
-
-
-
-
-
-
-
-
 
 def Name_banner():
    os.system('clear')
@@ -98,7 +88,7 @@ def Help():
  print(gr+"[3] Scrap data From any Group using Menu C button and it's work when your Setup Process already complated  ")
  print(gr+"[4]  ")
 
-def install():
+def installapp():
   setup_banner()
   print(gr+"[+] Installing requierments ...")
   os.system('python -m pip install telethon')
