@@ -15,8 +15,8 @@ gr="\033[1;32m"
 cy="\033[1;36m"
 
 def Name_banner():
-    os.system('clear')
-	 print(f"""
+   os.system('clear')
+   print(f"""
    (gr+" ******Welcome to IIT DEVELOPER *******")
        	{re}╦ ╦ ╔╦╗{cy}╔═╗ ┌─┐ ┬ ┬ ╔═╗ ║  ╔═╗ ┌─┐┌─┐┬─┐
         {re}║ ║  ║ {cy}║ ║ ├┤  │ │ ├┤  ║  ║ ║ ├─┘├┤ ├┬┘
