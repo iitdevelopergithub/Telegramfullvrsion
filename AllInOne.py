@@ -14,6 +14,64 @@ re="\033[1;31m"
 gr="\033[1;32m"
 cy="\033[1;36m"
 
+def main():
+    login()
+    
+def login():
+    username="IITDEVELOPER"
+    password="RK@900"
+    print("Enter username : ")
+    answer1=input()
+    print("Enter password : ")
+    answer2=input()
+    if answer1==username and answer2==password:
+        print("Welcome - Access Granted")
+        menu()
+
+def menu():
+    print("************MAIN MENU**************"")
+    time.sleep(1)
+    print()
+    choice = input("""
+                      A: Install Application 
+                      B: Setup Your Acount for scrapping Data
+                      C: Scrape Data From Group
+                      D: Setup Acount for Add Data in Group
+                      E: Add Member Into Group 
+                      H: How to Work this  
+                      Q: Quit/Log Out
+                      Please enter your choice: """)
+
+    if choice == "A" or choice =="a":
+          install()  
+    elif choice == "B" or choice =="b":
+         setupForScrape()        
+    elif choice == "C" or choice =="c":
+         scraper()
+    elif choice=="D" or choice=="d":
+         setupForAddData()
+    elif choice == "E" or choice =="b":
+         AddMemberInGroup()
+    elif choice == "H" or choice =="c":
+        Help() 
+    elif choice=="Q" or choice=="q":
+        sys.exit
+    else:
+        print("You must only select either A,B,C, or D.")
+        print("Please try again")
+        menu()
+
+main()
+
+
+
+
+
+
+
+
+
+
 def Name_banner():
    os.system('clear')
    print(f"""
