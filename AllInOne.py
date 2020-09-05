@@ -16,7 +16,8 @@ gr="\033[1;32m"
 cy="\033[1;36m"
 
 def main():
-    login()
+     menu()
+     #login()
     
 def login():
     username="IITDEVELOPER"
