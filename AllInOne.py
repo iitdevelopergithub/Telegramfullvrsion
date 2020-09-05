@@ -44,7 +44,7 @@ def menu():
     
     Please enter your choice: """)                  
     if choice == "A" or choice =="a":
-          installapp()  
+         installapp () 
     elif choice == "B" or choice =="b":
          setupForScrape()        
     elif choice == "C" or choice =="c":
@@ -54,9 +54,9 @@ def menu():
     elif choice == "E" or choice =="b":
          AddMemberInGroup()
     elif choice == "H" or choice =="c":
-        Help() 
+         Help() 
     elif choice=="Q" or choice=="q":
-        sys.exit
+         sys.exit
     else:
         print("You must only select either A,B,C, or D.")
         print("Please try again")
